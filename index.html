@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/9d5d15d816.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <section class="header">
-         <nav>
-            <a href="index.html"><img src="image/logo.png" alt="logo"></a>
-            <div class="nav_links">
-                <ul>
-                    <li><a href="">home</a></li>
-                    <li><a href="">about</a></li>
-                    <li><a href="">service</a></li>
-                    <li><a href="">blog</a></li>
-                    <li><a href="">contact</a></li>
-                </ul>
-            </div>
-         </nav>
-         <div class="text_area">
-            <h1>World's biggest university</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et consequatur ab non libero rem? Suscipit <br> harum doloremque culpa error itaque</p>
-            <a href="" class="btn">visit to know more</a>
-         </div>
-    </section>
+ <div class="section1">
+    <div class="nav">
+        <div class="logo">
+            <h1>Rohan <span>Hosen</span></h1>
+        </div>
+        <div class="meneu"  id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMeneu()"></i>
+           <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+           </ul>
+        </div>
+        <div class="subscribe">
+             <button>subscribe</button>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMeneu()"></i>
+    </div>
+ </div>
+  <script>
+    var navLinks = document.getElementById("navLinks")
+    function showMeneu(){
+        navLinks.style.display= "block";
+    }
+    function hideMeneu(){
+        navLinks.style.display= "none";
+    }
+  </script>
+ </script>
 </body>
 </html>

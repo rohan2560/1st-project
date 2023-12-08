@@ -1,77 +1,115 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-.header{
+.section1{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(image/banner.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/bg.jpg);
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-nav{
-    width: 90%;
+.nav{
+    width: 80%;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: auto;
-    padding: 1% 0%;
+    margin-left: 10%;
 }
-nav img{
-    width: 200px;
+.meneu ul{
+    display: flex;
+    list-style-type: none;
 }
-.nav_links ul li{
-    display: inline-block;
-    text-transform: uppercase;
-    margin: 30px;
+.meneu ul li{
+    padding-right: 4vw;
+
 }
-.nav_links ul li a{
+.meneu ul li a{
     text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-}   
-.nav_links ul li::after{
+    text-transform: capitalize;
+    color:white;
+    font-weight: 500;
+    font-size: 1.2vw;
+}
+.meneu ul li::after{
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
-    margin: auto;
+    background: crimson;
     display: block;
-    transition: .5s;
+    margin: auto;
+    transition: all .5s ease-in-out;
 }
-.nav_links ul li:hover::after{
+.meneu ul li:hover::after{
     width: 100%;
 }
-.text_area{
-    width: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+span{
+    color: crimson;
+}
+.nav .logo{
+    color: white;
+    font-size: 1vw;
+    word-spacing: .3vw;
+}
+.subscribe button{
+    padding: .7vw 2.5vw;
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-size: 1.3vw;
+    border-radius: 3px;
+    cursor: pointer;
     text-align: center;
+    transition:all .7s ease-in;
 }
-.text_area h1{
-    font-size: 60px;
-    color: #fff;
-    text-transform: capitalize;
+.subscribe button:hover{
+    background-color: lightseagreen;
+    color: crimson;
 }
-.text_area p{
-    color: #fff;
-    margin: 50px;
+.nav i{
+    font-size: 1vw;
+    color: white;
+    font-weight: bold;
+    display: none;
 }
-.text_area .btn{
-    text-decoration: none;
-    color: #fff;
-    padding: 13px 25px;
-    font-size: 13px;
-    border: 1px solid #fff;
-    transition: 1s;    
-}
-.text_area .btn:hover{
-    content: '';
-    width: 100%;
-    height: auto;
-    background: hsl(4, 90%, 58%);
-    
+@media (max-width:750px){ 
+    .subscribe{
+       display: none;
+    }
+    .meneu ul{
+        display: block;
+    }
+    .meneu ul li a{
+        font-size: 4.5vw;
+        line-height: 15vw;
+    }
+    .meneu{
+        position: absolute;
+        background: transparent;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        z-index: 2;
+        text-align: left;
+        display: none;
+        backdrop-filter: blur(50px);
+    }
+    .nav .logo{
+        font-size: 3vw;
+    }
+    .nav i{
+        display: block;
+        font-size: 8vw;
+        margin-left: 1vw;
+        cursor: pointer;
+    }
+    .meneu ul li:hover::after{
+        background-color: #fff;
+        margin-left: 0;
+    }
 }
