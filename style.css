@@ -76,6 +76,56 @@ span{
     font-weight: bold;
     display: none;
 }
+.input1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.input1 h1{
+    color: #fff;
+    font-size: 3vw;
+}
+.input1 h2{
+    color: #fff;
+    font-size: 2vw;
+    margin-top: 1px;
+}
+.input1 p{
+    color: #fff;
+    width: 50vw;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 1px;
+}
+.input1 .btn1{
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid crimson;
+    padding: 1vw 4vw;
+    position: relative;
+    margin-top: 20px;
+    z-index: 3;
+    border-radius: 3px;
+}
+.input1 .btn1::before{
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: crimson;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: block;
+    transition: all 1s ease-in-out;
+    z-index: -2;
+}
+.input1 .btn1:hover::before{
+    width: 100%;  
+}
+
+
 @media (max-width:750px){ 
     .subscribe{
        display: none;
@@ -94,7 +144,7 @@ span{
         right: 0;
         width: 200px;
         height: 100vh;
-        z-index: 2;
+        z-index: 80;
         text-align: left;
         display: none;
         backdrop-filter: blur(50px);
@@ -111,5 +161,19 @@ span{
     .meneu ul li:hover::after{
         background-color: #fff;
         margin-left: 0;
+    }
+    .input1 h1{
+        font-size: 6vw;
+    }
+    .input1 h2{
+        font-size: 5vw;
+    }
+    .input1 p{
+        font-size: 3vw;
+        width: 100%;
+    }
+    .input1 .btn1{
+        font-size: 4vw;
+        padding: 3vw 8vw ;
     }
 }
