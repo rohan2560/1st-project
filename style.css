@@ -27,9 +27,10 @@ html, body{
     outline: none;
     border: none;
     margin: 0 5px 10px 0;
-    box-shadow: -8px -5px 30px rgb(109, 96, 96), 8px 5px 30px rgb(109, 96, 96);
+    box-shadow: -2px -3px 15px rgb(109, 96, 96), -2px -3px 15px rgb(109, 96, 96);
     font-size: 25px;
     cursor: pointer;
+    background-color: #ffffff;
 }
 #res{
     display: flex;
@@ -40,8 +41,10 @@ html, body{
     flex: 1;
     height: 100px;
     text-align: right;
-    font-size: 30px;
+    font-size: 45px;
     padding-right: 5px;
+    z-index: 4;
+    box-shadow: none;
 }
 .cal input.resultA{
     width: 140px;
