@@ -50,11 +50,11 @@ function timer(timeCount){
     }
 }
 function runLine(time){
-    line = setInterval(lineGo,40)
+    line = setInterval(lineGo,50)
     function lineGo(){
         time++
         timeLine.style.width = time + "px";
-        if(time > 350){
+        if(time > 321){
             clearInterval(line)
         }
     }
@@ -123,4 +123,7 @@ quitQuiz.onclick = ()=>{
 }
 restart.onclick = ()=>{
     window.location.reload();
+}
+function navBar(){
+    alert("Hi there sorry there is no nav bar")
 }
